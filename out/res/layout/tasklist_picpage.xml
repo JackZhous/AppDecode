@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:scrollbarSize="3.0dip" android:scrollbarThumbHorizontal="@drawable/scrollbar_vertical_thumb" android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" android:id="@id/picList" android:focusableInTouchMode="false" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:divider="@null" android:layout_alignParentTop="true" android:headerDividersEnabled="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/noDataLL" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/text_size_13" android:textColor="#ffa0a0a0" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pic_no_data" android:drawableTop="@drawable/nodata_tip" android:drawablePadding="10.0dip" />
+        <TextView android:textSize="@dimen/text_size_12" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/pic_no_data_tip" android:drawablePadding="10.0dip" />
+    </LinearLayout>
+</RelativeLayout>

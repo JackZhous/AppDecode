@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.zhuanke.view.ViewTitle android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.tencent.smtt.sdk.WebView android:scrollbarSize="3.0dip" android:scrollbarThumbHorizontal="@drawable/scrollbar_vertical_thumb" android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" android:id="@id/webView" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

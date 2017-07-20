@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl" android:background="#78000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbarSize="3.0dip" android:scrollbarThumbHorizontal="@drawable/scrollbar_vertical_thumb" android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/view_dialog_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip">
+            <TextView android:scrollbarSize="3.0dip" android:scrollbarThumbHorizontal="@drawable/scrollbar_vertical_thumb" android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" android:scrollbarStyle="outsideOverlay" android:textSize="@dimen/text_size_12" android:textColor="@color/gray_12" android:id="@id/dialog_content" android:paddingLeft="15.0dip" android:paddingTop="16.0dip" android:paddingRight="15.0dip" android:focusableInTouchMode="false" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="应用信息" />
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/picList" android:paddingTop="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RelativeLayout android:background="@drawable/bg_shape_gray_solid_white_rectangle" android:padding="@dimen/divider_height" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/pic1" android:layout_width="100.0dip" android:layout_height="200.0dip" />
+                </RelativeLayout>
+                <RelativeLayout android:background="@drawable/bg_shape_gray_solid_white_rectangle" android:padding="@dimen/divider_height" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip">
+                    <ImageView android:id="@id/pic2" android:layout_width="100.0dip" android:layout_height="200.0dip" />
+                </RelativeLayout>
+            </LinearLayout>
+            <ImageView android:layout_marginTop="16.0dip" style="@style/DividerStyle.dialog" />
+            <LinearLayout style="@style/ZKDialogStyle.OneBtnContainer">
+                <Button android:id="@id/dialog_btn" android:text="关闭" style="@style/ZKDialogStyle.OneBtn" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

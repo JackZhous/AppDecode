@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/ZKDialogStyle.Background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/dialog_content" style="@style/ZKDialogStyle.NoTitleContent" />
+    <LinearLayout style="@style/ZKDialogStyle.TwoBtnContainer">
+        <Button android:id="@id/dialog_btn_left" android:text="@string/dialog_btn_cancel" style="@style/ZKDialogStyle.LeftBtn" />
+        <Button android:id="@id/dialog_btn_right" android:text="@string/dialog_btn_yes" style="@style/ZKDialogStyle.RightBtn" />
+    </LinearLayout>
+</LinearLayout>

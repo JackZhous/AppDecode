@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/ZKDialogStyle.Background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/dialog_title" android:text="@string/dialog_title_warm" style="@style/ZKDialogStyle.Title" />
+    <TextView android:id="@id/dialog_content" style="@style/ZKDialogStyle.HasTitleContent" />
+    <ImageView android:id="@id/dialog_divider" style="@style/DividerStyle.dialog" />
+    <LinearLayout style="@style/ZKDialogStyle.OneBtnContainer">
+        <Button android:id="@id/dialog_btn" android:text="@string/dialog_btn_yes" style="@style/ZKDialogStyle.OneBtn" />
+    </LinearLayout>
+</LinearLayout>

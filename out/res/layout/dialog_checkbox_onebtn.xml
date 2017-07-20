@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout style="@style/ZKDialogStyle.Background"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/dialog_title" android:text="@string/dialog_title_warm" style="@style/ZKDialogStyle.Title" />
+    <TextView android:id="@id/dialog_content" style="@style/ZKDialogStyle.HasTitleContent" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+        <TextView android:textSize="@dimen/text_size_12" android:textColor="#ffbab7b8" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="不再显示" android:drawableLeft="@drawable/dialog_check1" android:drawablePadding="5.0dip" />
+    </LinearLayout>
+    <ImageView style="@style/DividerStyle.dialog" />
+    <LinearLayout style="@style/ZKDialogStyle.OneBtnContainer">
+        <Button android:id="@id/dialog_btn" android:text="确定" style="@style/ZKDialogStyle.OneBtn" />
+    </LinearLayout>
+</LinearLayout>

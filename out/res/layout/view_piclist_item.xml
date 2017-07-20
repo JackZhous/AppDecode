@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@android:color/white" android:paddingLeft="30.0dip" android:paddingRight="30.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/exampleRL" android:background="#fff5f5f5" android:padding="@dimen/divider_height" android:layout_width="105.0dip" android:layout_height="175.0dip">
+        <ImageView android:id="@id/exPic" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+        <ImageView android:id="@id/flag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_example" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <TextView android:textSize="@dimen/text_size_10" android:textColor="@color/gray_11" android:gravity="center" android:id="@id/exPicLoading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="示例图加载中" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/picRL" android:background="@drawable/bg_shape_choice_pic" android:padding="@dimen/divider_height" android:layout_width="105.0dip" android:layout_height="175.0dip" android:layout_marginLeft="15.0dip">
+        <ImageView android:id="@id/pic" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+        <ImageView android:id="@id/open" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_open" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

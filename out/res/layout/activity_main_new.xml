@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/webRL" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.zhuanke.view.ViewWeb android:id="@id/viewWeb" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/welcomeBg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/welcome_bg" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/welcomeLoading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:src="@anim/welcome_loading" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

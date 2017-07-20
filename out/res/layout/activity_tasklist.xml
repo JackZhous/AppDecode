@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.zhuanke.view.ViewTitle android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <cn.zhuanke.view.ViewPagerTitle android:id="@id/pageTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/title" />
+    <cn.zhuanke.view.CustomViewPager android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/pageTitle" />
+    <RelativeLayout android:id="@id/toastRL" android:background="#78000000" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@drawable/fc_view_toast_bg" android:layout_width="175.0dip" android:layout_height="wrap_content" android:minHeight="65.0dip" android:layout_centerInParent="true">
+            <TextView android:textSize="@dimen/text_size_15" android:textColor="@color/white" android:gravity="center" android:id="@id/toast_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="任务争抢中" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

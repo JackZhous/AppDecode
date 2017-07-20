@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="cn.zhuanke.zhuankeAPP" platformBuildVersionCode="22" platformBuildVersionName="5.1.1-1819727">
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.cn.zhuanke.zhuankeAPP"/>
+    <permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.cn.zhuanke.zhuankeAPP" android:protectionLevel="normal"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="cn.zhuanke.base.ZKApplication">
+        <meta-data android:name="UMENG_APPKEY" android:value="567a672167e58efa810011ee"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="@string/channel_name"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="cn.zhuanke.ui.TestActivity" android:screenOrientation="portrait" android:theme="@style/appTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="cn.zhuanke.ui.MainActivityNew" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="cn.zhuanke.ui.TaskListActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="cn.zhuanke.ui.PlayTaskDetailActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="cn.zhuanke.ui.HighTaskInforActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="cn.zhuanke.ui.DuibaActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="cn.zhuanke.ui.SignTaskInforActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:name="cn.zhuanke.ui.PicTaskInforActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="false" android:name="cn.zhuanke.ui.PicTaskWebShotAty" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="false" android:name="cn.zhuanke.ui.PicTaskWebGalleryAty" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="cn.zhuanke.ui.PicTaskGalleryAty" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="cn.zhuanke.ui.ChoicePicActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="cn.zhuanke.ui.PicTaskFilterActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="cn.zhuanke.ui.crop.ImgCutActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="cn.zhuanke.ui.WebActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="cn.zhuanke.ui.SetActivity" android:screenOrientation="portrait" android:theme="@style/AppMainTheme"/>
+        <receiver android:name="cn.zhuanke.dotask.AlarmReceiver"/>
+        <receiver android:name="cn.zhuanke.utils.NotificationReceiver"/>
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name=".wxapi.WXEntryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:name="cn.zhuanke.push.MyPushMessageReceiver">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE"/>
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE"/>
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver" android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW"/>
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK"/>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver" android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD"/>
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:name="com.baidu.android.pushservice.PushService" android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.baidu.android.pushservice.CommandService"/>
+        <provider android:authorities="cn.zhuanke.zhuankeAPP" android:exported="true" android:name="com.baidu.android.pushservice.PushInfoProvider" android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.cn.zhuanke.zhuankeAPP"/>
+        <meta-data android:name="api_key" android:value="vMbeXa0GHZMQbDKyAChhjezc"/>
+        <activity android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent1105026916"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>

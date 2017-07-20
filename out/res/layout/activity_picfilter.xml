@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.zhuanke.view.ViewTitle android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/noPic" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/picfilter_no_pic" />
+        <TextView android:textColor="@color/gray_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="未找到任务相关截图" />
+    </LinearLayout>
+    <GridView android:scrollbarSize="3.0dip" android:scrollbarThumbHorizontal="@drawable/scrollbar_vertical_thumb" android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" android:scrollbarStyle="outsideOverlay" android:orientation="vertical" android:id="@id/grid" android:paddingLeft="9.0px" android:paddingRight="9.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:horizontalSpacing="9.0px" android:numColumns="3" android:divider="@null" android:layout_below="@id/title" android:layout_centerHorizontal="true" android:headerDividersEnabled="true" />
+</RelativeLayout>

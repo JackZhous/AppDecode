@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/titleRL" android:background="#fff5f5f5" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/gray_12" android:id="@id/signTip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="以下签到明天开启" android:singleLine="true" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:src="@color/gray_2" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl" android:background="@drawable/selector_bg_white_gray" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_below="@id/titleRL">
+        <ImageView android:id="@id/icon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="15.0dip" android:src="@drawable/taojin_icon_def_app" android:scaleType="fitXY" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/text_size_15" android:textColor="@color/black" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="名称" android:singleLine="true" android:layout_toRightOf="@id/icon" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/gold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" android:singleLine="true" />
+            <TextView android:textSize="25.0sp" android:textColor="@color/red" android:id="@id/rmb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:text="3.50" android:singleLine="true" />
+            <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/red" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:text="元" android:singleLine="true" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/text_size_15" android:textColor="@color/black" android:id="@id/taskDoing" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="任务进行中" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:src="@color/gray_2" android:layout_below="@id/rl" />
+    <RelativeLayout android:id="@id/window" android:background="#77ffffff" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_below="@id/titleRL" />
+</RelativeLayout>

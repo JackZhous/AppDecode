@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.zhuanke.view.ViewTitle android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ScrollView android:scrollbarSize="3.0dip" android:scrollbarThumbHorizontal="@drawable/scrollbar_vertical_thumb" android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" android:id="@id/sc" android:background="#fff5f5f5" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title">
+        <LinearLayout android:orientation="vertical" android:id="@id/LL" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/picList" android:background="@color/white" android:paddingTop="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/inforList" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView style="@style/DividerStyle.horizontal" />
+                <ImageView android:layout_marginTop="10.0dip" style="@style/DividerStyle.horizontal" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/gray_12" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/submitTip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="对比示例图检查，提交后需2个工作日审核" />
+            <Button android:textSize="@dimen/text_size_15" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/submit" android:background="@drawable/selector_shape_red" android:layout_width="260.0dip" android:layout_height="45.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="25.0dip" android:text="提交截图审核" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

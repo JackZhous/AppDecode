@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.zhuanke.view.ViewTitle android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <RelativeLayout android:id="@id/refresh" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_refresh" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/containerRL" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/bottomLL" android:background="#fff5f5f5" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="61.0dip" android:layout_alignParentBottom="true">
+            <Button android:textSize="@dimen/text_size_15" android:textColor="@color/red" android:gravity="center" android:id="@id/example" android:background="@drawable/selector_shape_picexample_bg" android:layout_width="fill_parent" android:layout_height="45.0dip" android:text="查看示例截图" android:layout_weight="1.0" />
+            <Button android:textSize="@dimen/text_size_15" android:textColor="@color/white" android:gravity="center" android:id="@id/shotPic" android:background="@drawable/selector_shape_red" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_marginLeft="10.0dip" android:text="截图" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.tencent.smtt.sdk.WebView android:scrollbarSize="3.0dip" android:scrollbarThumbHorizontal="@drawable/scrollbar_vertical_thumb" android:scrollbarThumbVertical="@drawable/scrollbar_vertical_thumb" android:id="@id/webView" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottomLL" />
+        <LinearLayout android:orientation="vertical" android:id="@id/web_net_error" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="85.0dip" android:layout_centerHorizontal="true">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/web_nowlan" />
+            <Button android:textSize="@dimen/text_size_15" android:textColor="#ffb0b0b0" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/reLoad" android:background="@drawable/bg_shape_web_reload" android:layout_width="120.0dip" android:layout_height="45.0dip" android:layout_marginTop="40.0dip" android:text="重新加载" />
+        </LinearLayout>
+        <Button android:textSize="@dimen/text_size_15" android:textColor="@color/white" android:gravity="center" android:id="@id/prePage" android:background="@drawable/bg_shape_prepage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="上一页" android:layout_above="@id/bottomLL" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

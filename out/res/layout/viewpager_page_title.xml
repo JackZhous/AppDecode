@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/page_title" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/page_title_item_1" layout="@layout/viewpager_page_title_item" />
+    <include android:id="@id/page_title_item_2" layout="@layout/viewpager_page_title_item" />
+    <include android:id="@id/page_title_item_3" layout="@layout/viewpager_page_title_item" />
+    <include android:id="@id/page_title_item_4" layout="@layout/viewpager_page_title_item" />
+</LinearLayout>

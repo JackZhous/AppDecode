@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="43.0dip">
+        <TextView android:textSize="@dimen/text_size_13" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/label" android:layout_width="100.0dip" android:layout_height="30.0dip" android:layout_marginLeft="15.0dip" android:text="手机号" android:singleLine="true" />
+        <EditText android:textSize="@dimen/text_size_13" android:textColor="@color/black" android:textColorHint="@color/gray_12" android:gravity="center_vertical" android:id="@id/edit" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:hint="\ 123123123" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView style="@style/DividerStyle.horizontal" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/firstInterrupt" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/secondInterrupt" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="48.0dip" />
+    <RelativeLayout android:id="@id/thirdInterrupt" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="88.0dip" />
+    <ImageView android:id="@id/imgProgress" android:background="@drawable/bg_shape_web_load_progress" android:layout_width="fill_parent" android:layout_height="3.0dip" />
+</RelativeLayout>

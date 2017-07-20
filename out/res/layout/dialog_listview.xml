@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/view_dialog_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:minWidth="1000.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/share_tip" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/dia_divider" android:gravity="center_vertical" android:id="@id/explanation_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="string/share_explanation" android:drawablePadding="5.0dip" />
+        <TextView android:textSize="@dimen/text_size_12" android:textColor="@color/dia_divider" android:gravity="center_vertical" android:id="@id/explanation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:text="string/share_explanation_content" />
+        <ImageView android:id="@id/line" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginTop="10.0dip" android:src="@color/gray_2" android:layout_alignParentBottom="true" />
+    </LinearLayout>
+    <ListViews android:id="@id/dialog_listView" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="#00000000" android:divider="@null" android:headerDividersEnabled="true" />
+</LinearLayout>

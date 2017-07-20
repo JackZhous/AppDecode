@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">赚客-手机赚钱</string>
+    <string name="task_title">任务列表</string>
+    <string name="page_title_down">试玩</string>
+    <string name="page_title_high">高额</string>
+    <string name="page_title_sign">签到</string>
+    <string name="page_title_pic">截图</string>
+    <string name="play_tips">必须通过【试玩应用】按钮开始任务</string>
+    <string name="play_tips1">必须点击【试玩应用】按钮开始任务</string>
+    <string name="sign_tips">必须通过【签到应用】按钮开始任务</string>
+    <string name="pic_tips">必须通过【打开应用，截图】按钮开始任务</string>
+    <string name="pic_tips1">必须点击【打开应用，截图】按钮开始任务</string>
+    <string name="play_no_data">暂无试玩任务</string>
+    <string name="play_no_data_tip">"能如此高效的完成了任务，确实敬佩
+赚客MM正为您准备更多的赚钱任务"</string>
+    <string name="high_no_data">暂无高额任务</string>
+    <string name="high_no_data_tip">"高额任务是赚客为您精选的赚钱任务
+按要求完成可获得比试玩更丰厚奖励"</string>
+    <string name="sign_no_data">暂无签到任务</string>
+    <string name="sign_no_data_tip">"完成试玩任务可激活相应的签到任务
+签到任务不用抢，只需按时完成即可"</string>
+    <string name="pic_no_data">暂无截图任务</string>
+    <string name="pic_no_data_tip">"完成试玩任务可激活相应的截图任务
+完成截图任务可获得丰厚的现金奖励"</string>
+    <string name="toast_error_data_analyze">数据错误，请稍后重试</string>
+    <string name="channel_name">from1</string>
+    <string name="image_task_upload_pic">上传截图 +%1$s元</string>
+    <string name="image_task_web_upload_pic">截图并上传 +%1$s元</string>
+    <string name="image_task_screenshot_tip">截图提示：</string>
+    <string name="click_haotoshotscreen"><b>【<u>查看如何完成截图任务</u>】</b></string>
+    <string name="image_task_starttask">"打开“邮箱大师”
+开始截图"</string>
+    <string name="title_screenshotDesc">截图任务详情</string>
+    <string name="image_task_uploading">正在上传截图</string>
+    <string name="get_picresource_fail">获取图片资源失败</string>
+    <string name="addbeans_task">完成任务获得 &lt;b>&lt;font color=#F8A31A>%1$s&lt;/font>&lt;/b> 元&lt;br>继续努力！</string>
+    <string name="addbeans_sign">完成签到获得 &lt;b>&lt;font color=#F8A31A>%1$s&lt;/font>&lt;/b> 元&lt;br>继续努力！</string>
+    <string name="dialog_title_exit">退出提示</string>
+    <string name="dialog_title_notWiFi">非WiFI网络提醒</string>
+    <string name="dialog_title_accountLock">账号锁定</string>
+    <string name="dialog_title_closePush">关闭提示</string>
+    <string name="dialog_title_refusepic_tip">截图任务提示</string>
+    <string name="dialog_title_forceupdate">重要升级</string>
+    <string name="dialog_title_normalupdate">新版本升级</string>
+    <string name="dialog_title_rootget">开启自动安装</string>
+    <string name="dialog_title_warm">温馨提示</string>
+    <string name="dialog_title_updatedownloader">升级中，请稍后</string>
+    <string name="dialog_title_netverify">网络验证提示</string>
+    <string name="dialog_title_install">安装提示</string>
+    <string name="dialog_title_download">下载提示</string>
+    <string name="dialog_title_sign">签到提示</string>
+    <string name="dialog_title_screenshot">截图提示</string>
+    <string name="dialog_title_garreryscreenshot">上传截图任务须知</string>
+    <string name="dialog_btn_yes">确定</string>
+    <string name="dialog_btn_cancel">取消</string>
+    <string name="dialog_btn_cancelclose">取消关闭</string>
+    <string name="dialog_btn_close">确认关闭</string>
+    <string name="dialog_btn_refuse">拒绝</string>
+    <string name="dialog_btn_permit">立即开启</string>
+    <string name="dialog_btn_exit">退出</string>
+    <string name="dialog_btn_clickrefresh">点击刷新</string>
+    <string name="dialog_btn_update">立即升级</string>
+    <string name="dialog_btn_pause">暂停</string>
+    <string name="dialog_btn_continueload">下载</string>
+    <string name="dialog_btn_cancelload">取消下载</string>
+    <string name="dialog_btn_toverify">前往验证</string>
+    <string name="dialog_btn_down">立即下载</string>
+    <string name="dialog_btn_install">安装</string>
+    <string name="dialog_btn_signnow">立即签到</string>
+    <string name="dialog_btn_i_know">我知道了</string>
+    <string name="dialog_btn_ok_i_know">好的，我知道了！</string>
+    <string name="dialog_btn_giveup">放弃</string>
+    <string name="dialog_btn_gofinish">去完成</string>
+    <string name="dialog_btn_continuefinish">继续完成</string>
+    <string name="dialog_content_closePush">您确定要关闭消息推送吗，关闭后将无法收到赚客活动提醒，奖品发货通知，和高奖励任务推荐。</string>
+    <string name="dialog_content_giveup_taskpro">任务进行中，是否放弃任务并停止下载？</string>
+    <string name="dialog_content_giveup_tasknotpro">任务进行中，是否放弃任务？</string>
+    <string name="dialog_content_taskdoing">您有任务正在进行中</string>
+    <string name="dialog_content_nosd">无内置SD卡，请插入内置SD卡</string>
+    <string name="dialog_content_not_find_dir">未找到截图任务文件夹，请通过“在线客服”反馈该问题</string>
+    <string name="dialog_content_app_not_install">您的应用未安装，暂时无法进行深度任务</string>
+    <string name="dialog_content_pause_down_app">正在下载中，是否暂停下载？</string>
+    <string name="dialog_content_nettimeout">网络走丢了，请检查网络后刷新</string>
+    <string name="dialog_content_lock">非常抱歉，您的账号因违规操作已被系统锁定</string>
+    <string name="dialog_content_version_broken">您当前使用的版本已损坏，请先卸载当前版本，再从官网下载安装最新版本</string>
+    <string name="dialog_content_is_simulator">请勿在模拟器上使用！</string>
+    <string name="dialog_content_exit">确定要离开了吗？</string>
+    <string name="dialog_content_wifi">当前为移动网络状态，下载将消耗移动网络流量，是否继续下载？</string>
+    <string name="dialog_content_wifi_verify">系统监测您当前的网络需要验证后才能正常使用，是否立即前往验证？</string>
+    <string name="dialog_content_getroot">应用下载完成后将自动安装，免除手动安装烦恼，是否开启？</string>
+    <string name="dialog_content_giveup_comment">放弃本次编辑？</string>
+    <string name="dialog_content_garreryscreenshot">"1.上传与任务无关图片，以及不满足任务要求的图片无法获得奖励；
+2.上传的图片必须为手机截图，通过第三方截图软件截取的图片无法上传。"</string>
+    <string name="errcode_success">分享成功</string>
+    <string name="errcode_cancel">分享取消</string>
+    <string name="errcode_deny">分享被拒绝</string>
+    <string name="errcode_unknown">分享返回</string>
+    <string name="downtask_picaward">完成试玩任务，可解锁&lt;font color=#EC4949>%1$s元&lt;/font>截图任务</string>
+    <string name="downtask_appname">试玩【%1$s】奖励</string>
+    <string name="signtask_appname">签到【%1$s】奖励</string>
+    <string name="finish_task">完成：%1$s任务 《%2$s》</string>
+    <string name="pictask_taskname">%1$s，奖励</string>
+    <string name="open_pic"><u>查看示例截图</u></string>
+</resources>
