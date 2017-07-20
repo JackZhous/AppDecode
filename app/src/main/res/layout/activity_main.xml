@@ -19,13 +19,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="搜索热舞"
-                android:onClick="onSearch"/>
+                android:onClick="onSearch"
+            android:textSize="20sp"/>
 
         <Button android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="完成任务"
-                android:onClick="onComplete"/>
+                android:onClick="onComplete"
+            android:textSize="20sp"/>
     </LinearLayout>
 
     <ListView android:layout_width="match_parent"

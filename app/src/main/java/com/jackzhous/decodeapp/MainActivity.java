@@ -1,5 +1,6 @@
 package com.jackzhous.decodeapp;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Disposable disposable;
     Adapter adapter;
     String taskId;
-
+    View cachView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 taskId = adapter.getTaskId(position);
+                if(cachView != null){
+                    cachView.setBackgroundColor(Color.WHITE);
+                }
+                view.setBackgroundColor(Color.GREEN);
+                cachView = view;
             }
         });
     }
