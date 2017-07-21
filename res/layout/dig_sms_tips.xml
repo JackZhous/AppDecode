@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/frame_white" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/dimen_14dp" android:textColor="@color/black" android:gravity="center" android:layout_width="@dimen/dimen_280dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_15dp" android:text="@string/sms_tips_1" />
+    <TextView android:textSize="@dimen/dimen_14dp" android:textColor="@color/black" android:gravity="center" android:layout_width="@dimen/dimen_280dp" android:layout_height="wrap_content" android:text="@string/sms_tips_2" />
+    <TextView android:textSize="@dimen/dimen_14dp" android:textColor="@color/black" android:gravity="center" android:layout_width="@dimen/dimen_250dp" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_15dp" android:text="@string/sms_tips" />
+    <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_1dp" />
+    <Button android:textSize="@dimen/dimen_15dp" android:textColor="@color/zdy_grey3" android:id="@id/btn_ok" android:background="@null" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_40dp" android:text="@string/good" android:layout_weight="1.0" />
+    <Button android:id="@id/btn_cancel" android:visibility="gone" android:layout_width="@dimen/dimen_0dp" android:layout_height="@dimen/dimen_0dp" />
+</LinearLayout>

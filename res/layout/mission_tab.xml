@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textColor="@color/zdy_red1" android:gravity="center" android:id="@id/mission_tab_try_play" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/try_play" android:layout_weight="1.0" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/mission_tab_qian_dao" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/qian_dao" android:layout_weight="1.0" />
+        <TextView android:textColor="@color/black" android:gravity="center" android:id="@id/mission_tab_screen_shot" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/screen_shot" android:layout_weight="1.0" />
+    </LinearLayout>
+    <ImageView android:id="@id/iv_cursor" android:background="@color/zdy_red1" android:layout_width="100.0dip" android:layout_height="3.0dip" android:scaleType="matrix" />
+</LinearLayout>

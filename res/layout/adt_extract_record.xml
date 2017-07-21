@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/default_bg" android:paddingLeft="@dimen/dimen_30dp" android:paddingTop="@dimen/dimen_30dp" android:paddingRight="@dimen/dimen_30dp" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:padding="@dimen/dimen_20dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/dimen_12dp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_30dp" android:layout_marginRight="@dimen/dimen_20dp" android:text="兑换单号" />
+            <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/red" android:id="@id/er_tv_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\ 9999999999999999" />
+        </LinearLayout>
+        <View style="@style/horizontal_line" />
+        <View android:layout_marginTop="@dimen/dimen_10dp" style="@style/horizontal_line" />
+        <LinearLayout android:orientation="horizontal" android:padding="@dimen/dimen_20dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/dimen_12dp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_30dp" android:layout_marginRight="@dimen/dimen_20dp" android:text="兑换时间" />
+            <TextView android:textSize="@dimen/dimen_15dp" android:id="@id/er_tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2017-02-28" />
+        </LinearLayout>
+        <View style="@style/horizontal_line" />
+        <View android:layout_marginTop="@dimen/dimen_10dp" style="@style/horizontal_line" />
+        <LinearLayout android:orientation="horizontal" android:padding="@dimen/dimen_20dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/dimen_12dp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_30dp" android:layout_marginRight="@dimen/dimen_20dp" android:text="兑换奖品" />
+            <TextView android:textSize="@dimen/dimen_15dp" android:id="@id/er_tv_goods" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20元微信提现" />
+        </LinearLayout>
+        <View style="@style/horizontal_line" />
+        <View android:layout_marginTop="@dimen/dimen_10dp" style="@style/horizontal_line" />
+        <LinearLayout android:orientation="horizontal" android:padding="@dimen/dimen_20dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/dimen_12dp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_30dp" android:layout_marginRight="@dimen/dimen_20dp" android:text="兑换状态" />
+            <TextView android:textSize="@dimen/dimen_15dp" android:id="@id/er_tv_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已发货" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

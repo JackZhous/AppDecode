@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/zdy_red1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/main_ll_guest" android:background="@color/zdy_red6" android:paddingLeft="@dimen/dimen_10dp" android:paddingTop="@dimen/dimen_5dp" android:paddingRight="@dimen/dimen_10dp" android:paddingBottom="@dimen/dimen_5dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/main_iv_guest" android:paddingRight="@dimen/dimen_5dp" android:layout_width="@dimen/dimen_40dp" android:layout_height="@dimen/dimen_40dp" android:src="@drawable/top_index_user" />
+            <TextView android:textSize="16.0dip" android:textColor="@color/white" android:id="@id/main_tv_guest_name" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/dimen_10dp" android:textColor="@color/zdy_red6" android:gravity="center" android:id="@id/main_tv_msg_sign" android:background="@drawable/point_white_bg" android:paddingLeft="@dimen/dimen_5dp" android:paddingRight="@dimen/dimen_5dp" android:paddingBottom="@dimen/dimen_2dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_5dp" android:text="2" />
+            <ImageView android:layout_width="@dimen/dimen_20dp" android:layout_height="@dimen/dimen_20dp" android:src="@drawable/in_icon" />
+        </LinearLayout>
+        <RelativeLayout android:paddingLeft="@dimen/dimen_10dp" android:paddingTop="@dimen/dimen_10dp" android:paddingRight="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/main_iv_red_packet_mission" android:layout_width="@dimen/dimen_80dp" android:layout_height="@dimen/dimen_80dp" />
+            <View android:background="@color/white" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/dimen_10dp" android:layout_below="@id/main_iv_red_packet_mission" />
+            <TextView android:textSize="@dimen/dimen_13dp" android:textColor="@color/white" android:id="@id/main_tv_text1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/yuan" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/dimen_18dp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/today_earnings" android:layout_toLeftOf="@id/main_tv_text1" />
+            <com.smartmob.lucktry.view.RunTextView android:textSize="@dimen/dimen_40dp" android:textColor="@color/white" android:id="@id/main_tv_earnings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/earnings" android:layout_alignBottom="@id/main_iv_red_packet_mission" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5dp" android:layout_marginBottom="@dimen/dimen_5dp">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/main_ll_extract_cash" android:layout_width="wrap_content" android:layout_height="@dimen/dimen_30dp" android:layout_centerVertical="true">
+                <ImageView android:layout_width="@dimen/dimen_20dp" android:layout_height="@dimen/dimen_20dp" android:src="@drawable/money_icon" />
+                <TextView android:textSize="@dimen/dimen_13dp" android:textColor="@color/zdy_white1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/extract_cash" android:layout_centerVertical="true" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/dimen_13dp" android:textColor="@color/zdy_white1" android:gravity="right" android:id="@id/main_tv_yu_e" android:layout_width="@dimen/dimen_45dp" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/dimen_13dp" android:textColor="@color/zdy_white1" android:gravity="right" android:id="@id/main_tv_all_earnings" android:layout_width="@dimen/dimen_45dp" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/main_tv_yu_e" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/dimen_13dp" android:textColor="@color/zdy_white1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/yu_e" android:layout_toLeftOf="@id/main_tv_yu_e" android:layout_alignTop="@id/main_tv_yu_e" />
+            <TextView android:textSize="@dimen/dimen_13dp" android:textColor="@color/zdy_white1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_earnings" android:layout_toLeftOf="@id/main_tv_all_earnings" android:layout_alignTop="@id/main_tv_all_earnings" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/main_ll_try_play" android:background="@drawable/item_click" android:padding="@dimen/dimen_13dp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_width="@dimen/dimen_40dp" android:layout_height="@dimen/dimen_40dp" android:layout_marginBottom="@dimen/dimen_5dp" android:src="@drawable/mission_icon" />
+            <TextView android:textSize="@dimen/dimen_13dp" android:textColor="@color/zdy_green1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/try_play_mission" />
+        </LinearLayout>
+        <View android:background="@color/default_bg" android:layout_width="@dimen/dimen_1dp" android:layout_height="fill_parent" />
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/main_ll_qiandao" android:background="@drawable/item_click" android:padding="@dimen/dimen_13dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_width="@dimen/dimen_40dp" android:layout_height="@dimen/dimen_40dp" android:layout_marginBottom="@dimen/dimen_5dp" android:src="@drawable/qiandao_icon" />
+                <TextView android:textSize="@dimen/dimen_13dp" android:textColor="@color/zdy_blue1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qiao_dao_mission" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/dimen_10dp" android:textColor="@color/white" android:gravity="center" android:id="@id/main_tv_qiandao_sign" android:background="@drawable/point_red_bg" android:paddingLeft="@dimen/dimen_3dp" android:paddingRight="@dimen/dimen_3dp" android:paddingBottom="@dimen/dimen_2dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_5dp" android:text="10" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View android:background="@color/default_bg" android:layout_width="@dimen/dimen_1dp" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/main_ll_screenshot" android:background="@drawable/item_click" android:padding="@dimen/dimen_13dp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_width="@dimen/dimen_40dp" android:layout_height="@dimen/dimen_40dp" android:layout_marginBottom="@dimen/dimen_5dp" android:src="@drawable/screenshot_icon" />
+            <TextView android:textSize="@dimen/dimen_13dp" android:textColor="@color/zdy_purple1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/screen_shot_mission" />
+        </LinearLayout>
+        <View android:background="@color/default_bg" android:layout_width="@dimen/dimen_1dp" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/main_ll_shoutu" android:background="@drawable/item_click" android:padding="@dimen/dimen_13dp" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_width="@dimen/dimen_40dp" android:layout_height="@dimen/dimen_40dp" android:layout_marginBottom="@dimen/dimen_5dp" android:src="@drawable/shoutu_icon" />
+            <TextView android:textSize="@dimen/dimen_13dp" android:textColor="@color/zdy_red2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shou_tu_mission" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/main_ll_invite_friends" android:background="@drawable/invite_friends" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_70dp" android:layout_marginTop="@dimen/dimen_15dp" />
+    <ImageView android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/main_ll_act_packet" android:background="@drawable/banner_720x140" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginTop="15.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/main_ll_red_packet" android:background="@drawable/item_click" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_60dp" android:layout_marginTop="@dimen/dimen_15dp">
+        <ImageView android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:layout_margin="@dimen/dimen_15dp" android:src="@drawable/red_packet" />
+        <TextView android:textSize="@dimen/dimen_16dp" android:textColor="@color/black" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:text="@string/each_red_packet" android:layout_weight="1.0" />
+        <ImageView android:layout_width="@dimen/dimen_20dp" android:layout_height="@dimen/dimen_20dp" android:layout_marginRight="@dimen/dimen_15dp" android:src="@drawable/in_hui_icon" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/frame_white" android:paddingLeft="@dimen/dimen_15dp" android:paddingTop="@dimen/dimen_15dp" android:paddingRight="@dimen/dimen_15dp" android:paddingBottom="@dimen/dimen_5dp" android:layout_width="300.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_240dp">
+        <ImageView android:id="@id/observer_iv_sample" android:layout_width="@dimen/dimen_130dp" android:layout_height="fill_parent" android:layout_marginRight="@dimen/dimen_10dp" />
+        <ImageView android:id="@id/observer_iv_shot" android:layout_width="@dimen/dimen_130dp" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/dimen_12dp" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10dp" android:text="@string/screen_shot_msg_5" />
+    <Button android:textColor="@color/white" android:id="@id/observer_btn_submit" android:background="@drawable/btn_press_red_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10dp" android:text="@string/submit_shot" />
+    <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/dimen_10dp" />
+    <TextView android:gravity="center" android:id="@id/observer_tv_cancel" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/close" />
+</LinearLayout>

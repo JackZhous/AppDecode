@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/lv_prizelist" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:divider="@null" />
+        <ProgressBar android:id="@id/pb_wait_award" android:visibility="gone" android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:indeterminateDuration="2000" android:layout_centerInParent="true" style="@style/mProgress_circle" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/act_shop_ll_nblank" android:paddingTop="@dimen/dimen_170dp" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="@dimen/dimen_50dp" android:layout_height="@dimen/dimen_50dp" android:layout_marginBottom="@dimen/dimen_10dp" android:src="@drawable/notice_icon" />
+            <TextView android:textSize="@dimen/dimen_12dp" android:textColor="@color/zdy_red1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_award_now" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

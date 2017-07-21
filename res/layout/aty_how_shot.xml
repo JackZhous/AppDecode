@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title" />
+    <ScrollView android:background="@color/white" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_5dp" android:layout_marginBottom="@dimen/dimen_10dp" android:text="1、进入《截图任务详情》页后，请先查看截图要求（红色文字），以及查看“示例截图" android:lineSpacingExtra="@dimen/dimen_5dp" />
+            <ImageView android:id="@id/how_shot_iv1" android:layout_width="fill_parent" android:layout_height="170.0dip" android:layout_margin="@dimen/dimen_5dp" />
+            <View android:background="@drawable/line_shape" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="@dimen/dimen_10dp" android:layout_marginBottom="@dimen/dimen_10dp" />
+            <TextView android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_5dp" android:layout_marginBottom="@dimen/dimen_10dp" android:text="2、必须点击【打开应用，截图】打开应用" android:lineSpacingExtra="@dimen/dimen_5dp" />
+            <ImageView android:id="@id/how_shot_iv2" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_margin="@dimen/dimen_5dp" />
+            <View android:background="@drawable/line_shape" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="@dimen/dimen_10dp" android:layout_marginBottom="@dimen/dimen_10dp" />
+            <TextView android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_5dp" android:layout_marginBottom="@dimen/dimen_10dp" android:text="3、应用打开后会出现提示，此时务必按任务要求完成任务，并进入你要截图的界面" android:lineSpacingExtra="@dimen/dimen_5dp" />
+            <ImageView android:id="@id/how_shot_iv3" android:layout_width="fill_parent" android:layout_height="130.0dip" android:layout_margin="@dimen/dimen_5dp" />
+            <View android:background="@drawable/line_shape" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="@dimen/dimen_10dp" android:layout_marginBottom="@dimen/dimen_10dp" />
+            <TextView android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_5dp" android:layout_marginBottom="@dimen/dimen_10dp" android:text="4、进入截图界面后，必须使用《手机自带截图功能》截图，截图成功后稍等几秒会出现提示框，表示截图成功" android:lineSpacingExtra="@dimen/dimen_5dp" />
+            <ImageView android:id="@id/how_shot_iv4" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_margin="@dimen/dimen_5dp" />
+            <View android:background="@drawable/line_shape" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="@dimen/dimen_10dp" android:layout_marginBottom="@dimen/dimen_10dp" />
+            <TextView android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_5dp" android:layout_marginBottom="@dimen/dimen_10dp" android:text="5、返回红包试客，会弹出以下提示框，请和示例截图进行对比，查看是否满足截图要求，如满足要求则提交审核" android:lineSpacingExtra="@dimen/dimen_5dp" />
+            <ImageView android:id="@id/how_shot_iv5" android:layout_width="fill_parent" android:layout_height="410.0dip" android:layout_margin="@dimen/dimen_5dp" android:layout_marginBottom="@dimen/dimen_20dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

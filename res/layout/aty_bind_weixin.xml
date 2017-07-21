@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/dimen_12dp" android:textColor="@color/zdy_yellow2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_10dp" android:text="为保证资金安全和微信提现，请绑定微信号" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/white" android:padding="@dimen/dimen_15dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/bind_weixin_iv_qr" android:layout_width="@dimen/dimen_150dp" android:layout_height="@dimen/dimen_150dp" />
+                <TextView android:textSize="@dimen/dimen_15dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10dp" android:text="1、长按上方二维码，点“存储图像”，将二维码保存到手机相册；" />
+                <TextView android:textSize="@dimen/dimen_15dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5dp" android:text="2、打开微信，找到“扫一扫”，点击“相册”；" />
+                <TextView android:textSize="@dimen/dimen_15dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5dp" android:text="3、选择二维码图片，手机会自动识别；" />
+                <TextView android:textSize="@dimen/dimen_15dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5dp" android:text="4、关注红包试客服务号，点击“绑定帐号”；" />
+                <TextView android:textSize="@dimen/dimen_15dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_5dp" android:text="5、在下方输入获得的验证码，进行绑定！" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/white" android:paddingLeft="@dimen/dimen_15dp" android:paddingTop="@dimen/dimen_10dp" android:paddingRight="@dimen/dimen_15dp" android:paddingBottom="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20dp">
+                <ImageView android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:layout_marginRight="@dimen/dimen_20dp" android:src="@drawable/set_weixin_icon" />
+                <EditText android:textSize="@dimen/dimen_16dp" android:id="@id/bind_weixin_et_code" android:background="@null" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:hint="请输入验证码" android:layout_weight="1.0" />
+            </LinearLayout>
+            <Button android:textColor="@color/white" android:id="@id/bind_weixin_btn_bind" android:background="@drawable/btn_yellow2_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dimen_20dp" android:text="马上绑定微信" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

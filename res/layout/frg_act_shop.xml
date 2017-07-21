@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/item_click" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <RelativeLayout android:id="@id/rl_actshop" android:paddingBottom="@dimen/dimen_8dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/rl_score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_20dp" android:layout_marginRight="@dimen/dimen_20dp">
+                <FrameLayout android:id="@id/fl_score" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/iv_score" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginLeft="@dimen/dimen_10dp" android:layout_marginTop="@dimen/dimen_10dp" android:layout_marginRight="@dimen/dimen_10dp" android:layout_marginBottom="10.0dip" android:src="@drawable/shape_button_2" />
+                    <TextView android:textSize="15.0dip" android:textColor="@color/zdy_red1" android:id="@id/tv_actscore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_15dp" android:layout_marginTop="@dimen/dimen_15dp" android:text="获得积分：" />
+                    <TextView android:textSize="15.0dip" android:textColor="@color/zdy_red1" android:id="@id/tv_remainscore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_150dp" android:layout_marginTop="@dimen/dimen_15dp" android:text="剩余积分:" android:layout_toRightOf="@id/tv_actscore" />
+                </FrameLayout>
+            </RelativeLayout>
+            <com.smartmob.lucktry.view.ListViewForScrollView android:id="@id/ll_shoplist" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:layout_below="@id/rl_score" />
+        </RelativeLayout>
+    </ScrollView>
+    <ProgressBar android:id="@id/act_shop_pb_wait" android:visibility="gone" android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:layout_marginTop="@dimen/dimen_200dp" android:indeterminateDuration="2000" android:layout_centerHorizontal="true" style="@style/mProgress_circle" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/act_shop_ll_blank" android:paddingTop="@dimen/dimen_170dp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="@dimen/dimen_50dp" android:layout_height="@dimen/dimen_50dp" android:layout_marginBottom="@dimen/dimen_10dp" android:src="@drawable/notice_icon" />
+        <TextView android:textSize="@dimen/dimen_12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_awardlist" />
+    </LinearLayout>
+</RelativeLayout>

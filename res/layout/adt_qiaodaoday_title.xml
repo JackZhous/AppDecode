@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="@dimen/dimen_20dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/dimen_15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_5dp" android:text="展开全部" />
+        <ImageView android:layout_width="15.0dip" android:layout_height="15.0dip" android:src="@drawable/down_hui_icon" />
+    </LinearLayout>
+    <View android:background="@color/zdy_grey2" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="@dimen/dimen_5dp" android:layout_marginRight="@dimen/dimen_5dp" />
+</LinearLayout>

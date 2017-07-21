@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/newbie_ll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/newbie_iv_top" android:layout_width="fill_parent" android:layout_height="160.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/newbie_ll_know" android:background="@drawable/item_click" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20dp">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_30dp" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_5dp" android:text="认识红包试客" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/dimen_12dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="通过回答问题，开启红包试客之路" android:layout_weight="1.0" />
+                </LinearLayout>
+                <RelativeLayout android:layout_width="130.0dip" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/newbie_ll_know_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                        <ImageView android:layout_width="@dimen/dimen_25dp" android:layout_height="@dimen/dimen_25dp" android:src="@drawable/lm_icon" />
+                        <TextView android:textSize="@dimen/dimen_16dp" android:textColor="@color/red" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_2dp" android:text="+" />
+                        <TextView android:textSize="@dimen/dimen_25dp" android:textColor="@color/red" android:layout_gravity="bottom" android:id="@id/newbie_tv_know" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.10" />
+                        <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/red" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_2dp" android:text="@string/yuan_" />
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/dimen_15dp" android:id="@id/newbie_tv_know_finish" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10dp" android:text="已完成" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/newbie_ll_bind_weixin" android:background="@drawable/item_click" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_30dp" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_5dp" android:text="绑定微信" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/dimen_12dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="关注红包试客，绑定后领取红包" android:layout_weight="1.0" />
+                </LinearLayout>
+                <RelativeLayout android:layout_width="130.0dip" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/newbie_ll_bind_weixin_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                        <ImageView android:layout_width="@dimen/dimen_25dp" android:layout_height="@dimen/dimen_25dp" android:src="@drawable/lm_icon" />
+                        <TextView android:textSize="@dimen/dimen_16dp" android:textColor="@color/red" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_2dp" android:text="+" />
+                        <TextView android:textSize="@dimen/dimen_25dp" android:textColor="@color/red" android:layout_gravity="bottom" android:id="@id/newbie_tv_bind_weixin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.10" />
+                        <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/red" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_2dp" android:text="@string/yuan_" />
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/dimen_15dp" android:id="@id/newbie_ll_bind_weixin_finish" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10dp" android:text="已完成" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/newbie_ll_finish" android:background="@drawable/item_click" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_30dp" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_5dp" android:text="完成试玩任务" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/dimen_12dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="在试玩任务中选择一个任务完成" android:layout_weight="1.0" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/dimen_15dp" android:id="@id/newbie_tv_finish" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10dp" android:text="已完成" />
+            </LinearLayout>
+            <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/newbie_ll_try_finish" android:background="@drawable/item_click" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_30dp" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_5dp" android:text="再完成试玩任务" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/dimen_12dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="在试玩任务中再选择一个任务完成" android:layout_weight="1.0" />
+                </LinearLayout>
+                <TextView android:textSize="@dimen/dimen_15dp" android:id="@id/newbie_tv_try_finish" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10dp" android:text="已完成" />
+            </LinearLayout>
+            <Button android:textSize="@dimen/dimen_16dp" android:textColor="@color/white" android:id="@id/newbie_btn_get" android:background="@drawable/btn_red1_click" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_50dp" android:layout_marginTop="@dimen/dimen_20dp" android:layout_marginRight="@dimen/dimen_50dp" android:text="领取1-10元新手红包" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/newbie_pb_wait" android:visibility="gone" android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:indeterminateDuration="2000" android:layout_centerInParent="true" style="@style/mProgress_circle" />
+    </RelativeLayout>
+</LinearLayout>

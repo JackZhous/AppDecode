@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/default_bg" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:gravity="center" android:id="@id/btnDecrease" android:background="@drawable/jia_50" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <EditText android:gravity="center" android:id="@id/etAmount" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="1" android:layout_weight="1.0" android:inputType="number" />
+    <Button android:gravity="center" android:id="@id/btnIncrease" android:background="@drawable/jian_50" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/qiao_dao_lv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+    <ProgressBar android:id="@id/qiao_dao_pb_wait" android:visibility="gone" android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:layout_marginTop="@dimen/dimen_200dp" android:indeterminateDuration="2000" android:layout_centerHorizontal="true" style="@style/mProgress_circle" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/qiao_dao_ll_blank" android:paddingTop="@dimen/dimen_170dp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="@dimen/dimen_50dp" android:layout_height="@dimen/dimen_50dp" android:layout_marginBottom="@dimen/dimen_10dp" android:src="@drawable/notice_icon" />
+        <TextView android:textSize="@dimen/dimen_12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_task_to_accept" />
+    </LinearLayout>
+</RelativeLayout>

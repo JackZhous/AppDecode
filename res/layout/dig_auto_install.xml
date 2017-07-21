@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/frame_white" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="@dimen/dimen_25dp" android:paddingRight="@dimen/dimen_25dp" android:layout_width="@dimen/dimen_300dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_15dp" android:layout_marginBottom="@dimen/dimen_15dp">
+        <ImageView android:layout_width="@dimen/dimen_25dp" android:layout_height="@dimen/dimen_25dp" android:src="@drawable/rb_hen_icon" />
+        <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:gravity="center" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:text="@string/open_auto_install" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:paddingLeft="@dimen/dimen_25dp" android:paddingRight="@dimen/dimen_25dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_25dp" android:text="@string/install_msg" android:lineSpacingExtra="@dimen/dimen_5dp" />
+    <View android:background="@color/zdy_grey1" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_1dp" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="15.0dip" android:textColor="@color/zdy_grey3" android:id="@id/btn_cancel" android:background="@null" android:layout_width="@dimen/dimen_0dp" android:layout_height="@dimen/dimen_50dp" android:text="@string/cancel" android:layout_weight="1.0" />
+        <View android:background="@color/zdy_grey1" android:layout_width="@dimen/dimen_1dp" android:layout_height="fill_parent" />
+        <Button android:textSize="15.0dip" android:textColor="@color/white" android:id="@id/btn_ok" android:background="@drawable/btn_open_bg" android:layout_width="@dimen/dimen_0dp" android:layout_height="@dimen/dimen_50dp" android:text="@string/open" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

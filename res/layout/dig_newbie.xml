@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="260.0dip" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/frame_white" android:layout_width="@dimen/dimen_250dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10dp">
+            <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:gravity="center" android:paddingLeft="@dimen/dimen_25dp" android:paddingRight="@dimen/dimen_25dp" android:layout_width="@dimen/dimen_250dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20dp" android:text="花5分钟，最高领取10元" />
+            <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:gravity="center" android:id="@id/mission_tips" android:paddingLeft="@dimen/dimen_25dp" android:paddingRight="@dimen/dimen_25dp" android:layout_width="@dimen/dimen_250dp" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_20dp" android:text="新手红包奖励" />
+            <View android:background="@color/zdy_grey1" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_1dp" />
+            <Button android:textSize="@dimen/dimen_15dp" android:textColor="@color/white" android:id="@id/btn_ok" android:background="@drawable/btn_open_bg2" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_40dp" android:text="立即去抢" android:layout_weight="1.0" />
+        </LinearLayout>
+        <ImageView android:id="@id/btn_cancel" android:layout_width="@dimen/dimen_20dp" android:layout_height="@dimen/dimen_20dp" android:src="@drawable/cancel" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

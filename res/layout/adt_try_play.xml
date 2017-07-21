@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/item_click" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/try_play_iv_appIcon" android:layout_width="@dimen/dimen_50dp" android:layout_height="@dimen/dimen_50dp" android:layout_marginRight="@dimen/dimen_10dp" android:src="@drawable/default_icon" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/dimen_16dp" android:textColor="@color/black" android:id="@id/try_play_tv_appName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_5dp" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/dimen_10dp" android:id="@id/try_play_tv_qiaodao" android:background="@drawable/text_bg" android:paddingLeft="@dimen/dimen_5dp" android:paddingTop="@dimen/dimen_2dp" android:paddingRight="@dimen/dimen_5dp" android:paddingBottom="@dimen/dimen_2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_2dp" android:text="@string/qian_dao" />
+                <TextView android:textSize="@dimen/dimen_10dp" android:id="@id/try_play_tv_screen_shot" android:background="@drawable/text_bg" android:paddingLeft="@dimen/dimen_5dp" android:paddingTop="@dimen/dimen_2dp" android:paddingRight="@dimen/dimen_5dp" android:paddingBottom="@dimen/dimen_2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_2dp" android:text="@string/screen_shot" />
+                <TextView android:textSize="@dimen/dimen_10dp" android:id="@id/try_play_tv_surplus" android:background="@drawable/text_bg" android:paddingLeft="@dimen/dimen_5dp" android:paddingTop="@dimen/dimen_2dp" android:paddingRight="@dimen/dimen_5dp" android:paddingBottom="@dimen/dimen_2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/try_play_ll_cost" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="@dimen/dimen_25dp" android:layout_height="@dimen/dimen_25dp" android:src="@drawable/lm_icon" />
+                <TextView android:textSize="@dimen/dimen_16dp" android:textColor="@color/red" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_2dp" android:text="+" />
+                <TextView android:textSize="@dimen/dimen_25dp" android:textColor="@color/red" android:layout_gravity="bottom" android:id="@id/try_play_tv_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/red" android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_2dp" android:text="@string/yuan_" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/dimen_16dp" android:textColor="@color/black" android:id="@id/try_play_tv_audit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tasking" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

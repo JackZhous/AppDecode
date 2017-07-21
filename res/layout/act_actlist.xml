@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title" />
+    <com.smartmob.lucktry.view.MyScrollView android:id="@id/scrollView" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/ll_actlist" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/iv_imgAct" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_150dp" android:src="@drawable/banner_720x350" android:scaleType="fitXY" />
+            <include layout="@layout/act_tab" />
+            <com.smartmob.lucktry.view.testViewPager android:id="@id/act_actlist_viewPager" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+    </com.smartmob.lucktry.view.MyScrollView>
+</LinearLayout>

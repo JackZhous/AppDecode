@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title" />
+    <TextView android:textColor="@color/zdy_yellow2" android:gravity="center" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tips_3" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/white" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:layout_marginRight="@dimen/dimen_10dp" android:src="@drawable/bind_phone_num" />
+        <EditText android:textSize="@dimen/dimen_16dp" android:id="@id/bind_phone_et_num" android:background="@null" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10dp" android:hint="@string/input_phone" android:layout_weight="1.0" android:inputType="number" />
+    </LinearLayout>
+    <View style="@style/horizontal_line" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:layout_margin="@dimen/dimen_10dp" android:src="@drawable/bind_phone_code" />
+        <EditText android:textSize="@dimen/dimen_16dp" android:id="@id/bind_phone_et_code" android:background="@null" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_10dp" android:hint="@string/input_code" android:layout_weight="1.0" android:inputType="number" />
+        <Button android:textSize="@dimen/dimen_16dp" android:textColor="@color/white" android:id="@id/bind_phone_btn_obtain" android:background="@drawable/bg_identify_code_normal" android:layout_width="@dimen/dimen_130dp" android:layout_height="fill_parent" android:layout_marginTop="@dimen/dimen_5dp" android:layout_marginRight="@dimen/dimen_15dp" android:layout_marginBottom="@dimen/dimen_5dp" android:text="@string/obtain_code" />
+    </LinearLayout>
+    <Button android:textSize="@dimen/dimen_16dp" android:textColor="@color/white" android:id="@id/bind_phone_btn_bind" android:background="@drawable/btn_blue_click" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_20dp" android:layout_marginTop="@dimen/dimen_20dp" android:layout_marginRight="@dimen/dimen_20dp" android:text="@string/bind_phone_now" />
+    <TextView android:textSize="@dimen/dimen_13dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_20dp" android:layout_marginTop="@dimen/dimen_10dp" android:layout_marginRight="@dimen/dimen_20dp" android:text="@string/tips_2" />
+</LinearLayout>

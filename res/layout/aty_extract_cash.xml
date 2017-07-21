@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title" />
+    <TextView android:textSize="@dimen/dimen_12dp" android:gravity="center" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="为保证现金安全，提现前需绑定相关信息" />
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/extract_cash_ll_phone" android:background="@drawable/item_click" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:layout_marginLeft="@dimen/dimen_5dp" android:layout_marginRight="@dimen/dimen_15dp" android:src="@drawable/money_mobile" />
+            <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:text="@string/phone_pay" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/dimen_12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_5dp" android:text="@string/more_privilege" />
+            <ImageView android:layout_width="@dimen/dimen_20dp" android:layout_height="@dimen/dimen_20dp" android:src="@drawable/in_icon_small" />
+        </LinearLayout>
+        <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_1dp" android:layout_marginLeft="@dimen/dimen_60dp" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/extract_cash_ll_weixin" android:background="@drawable/item_click" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:layout_marginLeft="@dimen/dimen_5dp" android:layout_marginRight="@dimen/dimen_15dp" android:src="@drawable/set_weixin_iconok" />
+            <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:text="@string/weixin_carry" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/dimen_12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/dimen_5dp" android:text="@string/more_privilege" />
+            <ImageView android:layout_width="@dimen/dimen_20dp" android:layout_height="@dimen/dimen_20dp" android:src="@drawable/in_icon_small" />
+        </LinearLayout>
+        <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_1dp" android:layout_marginLeft="@dimen/dimen_60dp" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/extract_cash_ll_zhifubao" android:background="@drawable/item_click" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:layout_marginLeft="@dimen/dimen_5dp" android:layout_marginRight="@dimen/dimen_15dp" android:src="@drawable/money_zhifubao" />
+            <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:text="@string/zhifubao_carry" android:layout_weight="1.0" />
+            <ImageView android:layout_width="@dimen/dimen_20dp" android:layout_height="@dimen/dimen_20dp" android:src="@drawable/in_icon_small" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/extract_cash_ll_record" android:background="@drawable/item_click" android:padding="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_30dp">
+        <ImageView android:layout_width="@dimen/dimen_30dp" android:layout_height="@dimen/dimen_30dp" android:layout_marginLeft="@dimen/dimen_5dp" android:layout_marginRight="@dimen/dimen_15dp" android:src="@drawable/money_record" />
+        <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/black" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:text="@string/carry_record" android:layout_weight="1.0" />
+        <ImageView android:layout_width="@dimen/dimen_20dp" android:layout_height="@dimen/dimen_20dp" android:src="@drawable/in_icon_small" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.jackzhous.decodeapp.net;
 
 import com.jackzhous.decodeapp.response.BaseResponse;
+import com.jackzhous.decodeapp.response.ShenDuTaskBean;
 import com.jackzhous.decodeapp.response.TaskListResponse;
 import com.jackzhous.netlibrary.NetClient;
 
@@ -36,6 +37,26 @@ public interface NetApis {
     @FormUrlEncoded
     @POST("xianshi/done")
     Observable<BaseResponse> done(@Field("param") String param);
+
+    @FormUrlEncoded
+    @POST("shendu/list")
+    Observable<ShenDuTaskBean> getShenDuTaskList(@Field("param") String param);
+
+    @FormUrlEncoded
+    @POST("shendu/rob")
+    Observable<BaseResponse> robShenDuTask(@Field("param") String param);
+
+    @FormUrlEncoded
+    @POST("shendu/info")
+    Observable<BaseResponse> getShenDuInfo(@Field("param") String param);
+
+    @FormUrlEncoded
+    @POST("shendu/ing")
+    Observable<BaseResponse> ingShenDu(@Field("param") String param);
+
+    @FormUrlEncoded
+    @POST("shendu/done")
+    Observable<BaseResponse> doneShenDu(@Field("param") String param);
 
     final class Factory{
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/frame_white" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="@dimen/dimen_30dp" android:layout_width="@dimen/dimen_280dp" android:layout_height="wrap_content">
+        <ImageView android:layout_width="@dimen/dimen_25dp" android:layout_height="@dimen/dimen_25dp" android:layout_marginRight="@dimen/dimen_10dp" android:src="@drawable/incash_notice_icon" />
+        <TextView android:textSize="@dimen/dimen_16dp" android:gravity="center" android:id="@id/mission_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="是否提现？" android:lineSpacingExtra="@dimen/dimen_5dp" />
+    </LinearLayout>
+    <View android:background="@color/zdy_grey1" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_1dp" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="@dimen/dimen_15dp" android:textColor="@color/zdy_grey3" android:id="@id/btn_cancel" android:background="@null" android:layout_width="@dimen/dimen_0dp" android:layout_height="@dimen/dimen_40dp" android:text="取消" android:layout_weight="1.0" />
+        <View android:background="@color/zdy_grey1" android:layout_width="@dimen/dimen_1dp" android:layout_height="fill_parent" />
+        <Button android:textSize="@dimen/dimen_15dp" android:textColor="@color/white" android:id="@id/btn_ok" android:background="@drawable/btn_open_bg" android:layout_width="@dimen/dimen_0dp" android:layout_height="@dimen/dimen_40dp" android:text="确认提现" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

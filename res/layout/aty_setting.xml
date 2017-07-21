@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/title" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_20dp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/item_click" android:paddingLeft="@dimen/dimen_15dp" android:paddingTop="@dimen/dimen_10dp" android:paddingRight="@dimen/dimen_15dp" android:paddingBottom="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_50dp">
+            <TextView android:textSize="@dimen/dimen_16dp" android:textColor="@color/black" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:text="@string/wifi_tips" android:layout_weight="1.0" />
+            <CheckBox android:id="@id/setting_cb_download_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/setting_rl_download_tips" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_50dp" />
+    </RelativeLayout>
+    <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_1dp" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/item_click" android:paddingLeft="@dimen/dimen_15dp" android:paddingTop="@dimen/dimen_10dp" android:paddingRight="@dimen/dimen_15dp" android:paddingBottom="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_50dp">
+            <TextView android:textSize="@dimen/dimen_16dp" android:textColor="@color/black" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:text="@string/accept_new_msg" android:layout_weight="1.0" />
+            <CheckBox android:id="@id/setting_cb_accept_newMsg" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/setting_rl_accept_newMsg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_50dp" />
+    </RelativeLayout>
+    <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_1dp" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/item_click" android:paddingLeft="@dimen/dimen_15dp" android:paddingTop="@dimen/dimen_10dp" android:paddingRight="@dimen/dimen_15dp" android:paddingBottom="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_50dp">
+            <TextView android:textSize="@dimen/dimen_16dp" android:textColor="@color/black" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:text="@string/delete_apk" android:layout_weight="1.0" />
+            <CheckBox android:id="@id/setting_cb_delete_apk" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/setting_rl_delete_apk" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_50dp" />
+    </RelativeLayout>
+    <View android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_1dp" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/setting_ll_clean" android:background="@drawable/item_click" android:paddingLeft="@dimen/dimen_15dp" android:paddingTop="@dimen/dimen_10dp" android:paddingRight="@dimen/dimen_15dp" android:paddingBottom="@dimen/dimen_10dp" android:layout_width="fill_parent" android:layout_height="@dimen/dimen_50dp">
+        <TextView android:textSize="@dimen/dimen_16dp" android:textColor="@color/black" android:layout_width="@dimen/dimen_0dp" android:layout_height="wrap_content" android:text="@string/clean_apk" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/dimen_12dp" android:id="@id/setting_clean_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30.50 MB" />
+    </LinearLayout>
+</LinearLayout>
