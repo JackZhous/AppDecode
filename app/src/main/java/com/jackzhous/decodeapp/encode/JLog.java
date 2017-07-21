@@ -7,7 +7,7 @@ import android.util.Log;
  */
 
 public class JLog {
-    private static final String TAG = "jackzhous";
+    private static final String TAG = "j_tag";
 
     public static void i(String message){
         if(message != null){

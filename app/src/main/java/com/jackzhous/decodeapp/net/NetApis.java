@@ -1,5 +1,6 @@
 package com.jackzhous.decodeapp.net;
 
+import com.jackzhous.decodeapp.response.BaseResponse;
 import com.jackzhous.decodeapp.response.TaskListResponse;
 import com.jackzhous.netlibrary.NetClient;
 
@@ -19,6 +20,22 @@ public interface NetApis {
     @FormUrlEncoded
     @POST("xianshi/list")
     Observable<TaskListResponse> getTaskList(@Field("param") String param);
+
+    @FormUrlEncoded
+    @POST("xianshi/rob")
+    Observable<BaseResponse> robTask(@Field("param") String param);
+
+    @FormUrlEncoded
+    @POST("xianshi/info")
+    Observable<BaseResponse> getInfo(@Field("param") String param);
+
+    @FormUrlEncoded
+    @POST("xianshi/ing")
+    Observable<BaseResponse> ing(@Field("param") String param);
+
+    @FormUrlEncoded
+    @POST("xianshi/done")
+    Observable<BaseResponse> done(@Field("param") String param);
 
     final class Factory{
 
