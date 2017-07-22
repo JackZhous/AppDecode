@@ -117,6 +117,7 @@ public class TaskPresenter extends BasePresenter {
 
                     }
                 })
+                .subscribeOn(AndroidSchedulers.mainThread())
                 .flatMap(new Fun("rob"){
                     @Override
                     public ObservableSource<BaseResponse> apply(BaseResponse baseResponse) throws Exception {
