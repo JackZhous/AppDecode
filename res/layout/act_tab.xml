@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/default_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
-        <TextView android:textColor="@color/zdy_red1" android:gravity="center" android:id="@id/tv_act_introduce" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="活动介绍" android:layout_weight="1.0" />
-        <TextView android:textColor="@color/zdy_red1" android:gravity="center" android:id="@id/tv_act_integerShop" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="积分商店" android:layout_weight="1.0" />
-    </LinearLayout>
-    <ImageView android:id="@id/iv_cursor_1" android:background="@color/zdy_red1" android:layout_width="160.0dip" android:layout_height="3.0dip" android:scaleType="matrix" />
-</LinearLayout>

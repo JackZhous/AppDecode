@@ -35,10 +35,12 @@ public class TaskPresenter extends BasePresenter {
     private static final int MAX_NUMBER = 360;
     private static final int MIN_NUMBER = 300;
     private TaskView taskView;
+    protected NetApis apis;
 
     public TaskPresenter(NetApis apis, TaskView taskView) {
-        super(apis);
+        super();
         this.taskView = taskView;
+        this.apis = apis;
     }
 
 

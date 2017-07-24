@@ -12,11 +12,10 @@ import io.reactivex.disposables.Disposable;
 
 public class BasePresenter{
 
-    protected NetApis apis;
+
     protected Disposable disposable;
 
-    public BasePresenter(NetApis apis) {
-        this.apis = apis;
+    public BasePresenter(){
     }
 
     public void attach() {
