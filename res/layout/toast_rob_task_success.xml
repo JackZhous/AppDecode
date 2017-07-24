@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:background="@drawable/frame_black" android:layout_width="@dimen/dimen_200dp" android:layout_height="@dimen/dimen_120dp" android:alpha="0.7" />
-    <ImageView android:id="@id/rob_task_iv" android:layout_width="@dimen/dimen_70dp" android:layout_height="@dimen/dimen_50dp" android:layout_marginTop="@dimen/dimen_20dp" android:src="@drawable/rb_hen_icon" android:layout_centerHorizontal="true" />
-    <TextView android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dimen_10dp" android:text="@string/rob_task_msg" android:layout_below="@id/rob_task_iv" android:layout_centerHorizontal="true" android:lineSpacingExtra="@dimen/dimen_5dp" />
-</RelativeLayout>

@@ -194,25 +194,4 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             taskType = "2";
         }
     }
-
-
-    private void test(){
-        String param = Encode.encode(new ListRequest("1"));
-        apis.getTaskList(param)
-                .subscribeOn(Schedulers.io())
-                .unsubscribeOn(Schedulers.io())
-                .flatMap(new Fun("sss"){
-                    @Override
-                    public ObservableSource<BaseResponse> apply(BaseResponse baseResponse) throws Exception {
-                        if(baseResponse.getFlag() == 1){
-                            JLog.i("bug");
-                            throw new ApiException(-1, "sdlkfj");
-                        }
-                        return super.apply(baseResponse);
-                    }
-                })
-                .retryWhen(new RetryWithDelay(10))
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe();
-    }
 }

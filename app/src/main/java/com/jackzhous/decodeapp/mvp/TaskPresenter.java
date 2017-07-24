@@ -44,7 +44,7 @@ public class TaskPresenter extends BasePresenter {
 
     public void doSearchXianshiTask(){
         String param = Encode.encode(new ListRequest("1"));
-
+        JLog.i(param);
         apis.getTaskList(param)
                 .subscribeOn(Schedulers.io())
                 .unsubscribeOn(Schedulers.io())

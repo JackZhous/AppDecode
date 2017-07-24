@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/frame_white" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/download_iv_anim" android:paddingLeft="@dimen/dimen_25dp" android:paddingRight="@dimen/dimen_25dp" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginTop="@dimen/dimen_20dp" android:layout_marginBottom="@dimen/dimen_20dp" />
-    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="@dimen/dimen_25dp" android:paddingRight="@dimen/dimen_25dp" android:layout_width="@dimen/dimen_280dp" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dimen_20dp">
-        <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/zdy_grey3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正在升级，请稍后..." />
-        <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/zdy_grey3" android:id="@id/download_tv_percent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" />
-    </LinearLayout>
-</LinearLayout>

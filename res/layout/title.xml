@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/zdy_red1" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:id="@id/title_ll_back" android:padding="@dimen/dimen_10dp" android:layout_width="@dimen/dimen_80dp" android:layout_height="wrap_content" android:layout_centerVertical="true">
-        <ImageView android:layout_width="@dimen/dimen_20dp" android:layout_height="@dimen/dimen_20dp" android:src="@drawable/back_icon" />
-    </LinearLayout>
-    <TextView android:textSize="@dimen/dimen_20dp" android:textColor="@color/white" android:gravity="center" android:id="@id/title_tv_name" android:padding="@dimen/dimen_10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/aty_title" android:layout_centerInParent="true" />
-    <TextView android:textSize="@dimen/dimen_15dp" android:textColor="@color/white" android:gravity="right" android:id="@id/title_tv_button" android:padding="@dimen/dimen_10dp" android:layout_width="@dimen/dimen_80dp" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-</RelativeLayout>
