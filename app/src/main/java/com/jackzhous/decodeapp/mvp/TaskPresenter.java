@@ -35,10 +35,12 @@ public class TaskPresenter extends BasePresenter {
     private static final int MAX_NUMBER = 360;
     private static final int MIN_NUMBER = 300;
     private TaskView taskView;
+    protected NetApis apis;
 
     public TaskPresenter(NetApis apis, TaskView taskView) {
-        super(apis);
+        super();
         this.taskView = taskView;
+        this.apis = apis;
     }
 
 
@@ -107,6 +109,7 @@ public class TaskPresenter extends BasePresenter {
 
     public void doXianShiTask(final TaskListResponse.BodyBean.AppListBean taskBean){
         final String robParam = Encode.encode(new RobRequest(taskBean.getIDTask()));
+        JLog.i("rob "+robParam);
         apis.robTask(robParam)
                 .subscribeOn(Schedulers.io())
                 .unsubscribeOn(Schedulers.io())
@@ -122,6 +125,7 @@ public class TaskPresenter extends BasePresenter {
                     @Override
                     public ObservableSource<BaseResponse> apply(BaseResponse baseResponse) throws Exception {
                         checkError(baseResponse.getFlag());
+
                         return apis.getInfo(robParam);
                     }
                 })
@@ -130,6 +134,7 @@ public class TaskPresenter extends BasePresenter {
                     public ObservableSource<BaseResponse> apply(BaseResponse baseResponse) throws Exception {
                         checkError(baseResponse.getFlag());
                         String ing1 = Encode.encode(new IngRequest("1", taskBean.getIDTask()));
+                        JLog.i("ing1 "+ing1);
                         return apis.ing(ing1);
                     }
                 })
@@ -139,6 +144,7 @@ public class TaskPresenter extends BasePresenter {
                     public ObservableSource<BaseResponse> apply(BaseResponse baseResponse) throws Exception {
                         checkError(baseResponse.getFlag());
                         String ing1 = Encode.encode(new IngRequest("2", taskBean.getIDTask()));
+                        JLog.i("ing2 "+ing1);
                         return apis.ing(ing1);
                     }
                 })
@@ -148,6 +154,7 @@ public class TaskPresenter extends BasePresenter {
                     public ObservableSource<BaseResponse> apply(BaseResponse baseResponse) throws Exception {
                         checkError(baseResponse.getFlag());
                         String ing1 = Encode.encode(new IngRequest("3", taskBean.getIDTask()));
+                        JLog.i("ing3 "+ing1);
                         return apis.ing(ing1);
                     }
                 })
@@ -157,6 +164,7 @@ public class TaskPresenter extends BasePresenter {
                     public ObservableSource<BaseResponse> apply(BaseResponse baseResponse) throws Exception {
                         checkError(baseResponse.getFlag());
                         String ing1 = Encode.encode(new IngRequest("4", taskBean.getIDTask()));
+                        JLog.i("ing4 "+ing1);
                         return apis.ing(ing1);
                     }
                 })
@@ -169,7 +177,7 @@ public class TaskPresenter extends BasePresenter {
                         long time = System.currentTimeMillis()/1000;
                         long opentTime = time - number;
                         String done = Encode.encode(new DoneRequest("1", taskBean.getIDTask(), opentTime+""));
-                        JLog.i(done);
+                        JLog.i("done " +done);
                         return apis.done(done);
                     }
                 }).flatMap(new Fun("done"){

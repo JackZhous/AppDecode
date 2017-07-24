@@ -8,6 +8,8 @@ import com.jackzhous.netlibrary.NetClient;
 import io.reactivex.Observable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Header;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 /**
@@ -15,8 +17,9 @@ import retrofit2.http.POST;
  */
 
 public interface NetApis {
-    String BASE_URL = "http://api.zhuanke.cn/api/lee/v1/";
-    String COOKIE = "6814629f652726d3a96037625c5df007=hyvFs%2FCY9sERGYZ7RkAEy%2BzKgTAld1L95hrVZ96XuG4%3D";
+    String ZUANKE_BASE_URL = "http://api.zhuanke.cn/api/lee/v1/";
+    String ZUANKE_COOKIE = "6814629f652726d3a96037625c5df007=hyvFs%2FCY9sERGYZ7RkAEy%2BzKgTAld1L95hrVZ96XuG4%3D";
+
 
     @FormUrlEncoded
     @POST("xianshi/list")
@@ -61,21 +64,12 @@ public interface NetApis {
     final class Factory{
 
         public static NetApis getHttpManager(){
-            NetClient client = new NetClient(){
-                @Override
-                public String getCookies() {
-                    return COOKIE;
-                }
-
-                @Override
-                public String getBaseUrl() {
-                    return BASE_URL;
-                }
-            };
-
+            NetClient client = new NetClient(ZUANKE_BASE_URL);
+            client.addHeader("Cookie", ZUANKE_COOKIE);
             NetApis manager = client.getNetClient(NetApis.class);
             return  manager;
         }
+
     }
 
 }

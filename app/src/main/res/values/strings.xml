@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DecodeApp</string>
+
+    <string name="choose_info">请选择需要赚钱的app:</string>
+    <string name="shiwan">红包试客</string>
+
+    <string name="zuanke">赚客-手机赚钱</string>
+
+    <string name="start">开始赚钱</string>
 </resources>

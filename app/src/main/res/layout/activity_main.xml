@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.jackzhous.decodeapp.MainActivity">
+    tools:context="com.jackzhous.decodeapp.ZhuanKeActivity">
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -15,8 +15,8 @@
 
     <RadioGroup android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:id="@+id/radiogroup">
+                android:orientation="horizontal"
+                android:id="@+id/radiogroup">
 
         <RadioButton android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
