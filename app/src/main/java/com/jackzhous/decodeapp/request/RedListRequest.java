@@ -12,12 +12,11 @@ public class RedListRequest {
      * username : 34bab130-8950-4707-923c-28bd333edff7
      */
 
-    private String id;
-    private String username;
+    private String id = "74934";
+    private String username = "34bab130-8950-4707-923c-28bd333edff7";
 
-    public RedListRequest(String id, String username) {
-        this.id = id;
-        this.username = username;
+    public RedListRequest() {
+
     }
 
     public String getId() {

@@ -109,13 +109,4 @@ public class ZhuanKeActivity extends BaseActivity{
         presenter.dettach();
     }
 
-
-
-    private void test(){
-        List<Object> list = new ArrayList<>();
-        list.add("74934");
-        list.add("34bab130-8950-4707-923c-28bd333edff7");
-        String str = Encode.redAppEncode("256", "2245", "6179780");
-        JLog.i(str);
-    }
 }

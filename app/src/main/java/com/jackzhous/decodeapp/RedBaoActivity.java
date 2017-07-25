@@ -4,7 +4,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
+import com.jackzhous.decodeapp.adapter.RedShiWanAdapter;
 import com.jackzhous.decodeapp.mvp.RedTaskPresenter;
+import com.jackzhous.decodeapp.response.RedListResponse;
 
 /**
  * Created by jackzhous on 2017/7/24.
@@ -13,13 +15,16 @@ import com.jackzhous.decodeapp.mvp.RedTaskPresenter;
 public class RedBaoActivity extends BaseActivity {
 
     RedTaskPresenter presenter;
+    RedShiWanAdapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContent("RedBao");
-        presenter = new RedTaskPresenter();
+        presenter = new RedTaskPresenter(this);
         presenter.attach();
+        adapter = new RedShiWanAdapter();
+        listView.setAdapter(adapter);
     }
 
 
@@ -33,12 +38,11 @@ public class RedBaoActivity extends BaseActivity {
             cachView = null;
         }
         CurrentPos = -1;
-        presenter.getTaskList();
-//        if("1".equals(taskType)){
-//            presenter.doSearchXianshiTask();
-//        }else{
-//            presenter.doSearchShenDu();
-//        }
+        if("1".equals(taskType)){
+            presenter.getTaskList();
+        }else{
+            //presenter.doSearchShenDu();
+        }
     }
 
     /**
@@ -50,29 +54,35 @@ public class RedBaoActivity extends BaseActivity {
             showToast("请选择具体的任务");
             return;
         }
-//
-//        if("1".equals(taskType)){
-//            TaskListResponse.BodyBean.AppListBean bean = (TaskListResponse.BodyBean.AppListBean)adapter.getItem(CurrentPos);
-//            if(bean.getQuota() <= 0){
-//                showToast("任务已被抢完");
-//                return;
-//            }
-//            presenter.doXianShiTask(bean);
-//        }else{
-//            presenter.doShenDuTask((ShenDuTaskBean.BodyBean.AppListBean.AppSubListBean)adapter.getItem(CurrentPos));
-//        }
+
+        if("1".equals(taskType)){
+            RedListResponse.DataBean bean = (RedListResponse.DataBean)adapter.getItem(CurrentPos);
+            if(bean.getQuantity() <= 0){
+                showToast("任务已被抢完");
+                return;
+            }
+            presenter.doCompleteShiWanTask(bean);
+        }else{
+            //presenter.doShenDuTask((ShenDuTaskBean.BodyBean.AppListBean.AppSubListBean)adapter.getItem(CurrentPos));
+        }
 
     }
 
 
     @Override
     public void endTask(int code, String str) {
-
+        if(code == 1 && adapter != null){
+            cachView.setBackgroundColor(Color.WHITE);
+            cachView = null;
+            adapter.deleteItem(CurrentPos);
+        }
+        tv.setText(str);
+        dialog.dismiss();
     }
 
     @Override
     public void endSearch(Object list) {
-
+        adapter.setData(list);
     }
 
     @Override

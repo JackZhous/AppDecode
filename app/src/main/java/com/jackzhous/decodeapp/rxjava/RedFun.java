@@ -11,7 +11,7 @@ import io.reactivex.functions.Function;
  * Created by jackzhous on 2017/7/24.
  */
 
-public class RedFun implements Function<RedBaseResponse, ObservableSource<RedBaseResponse>> {
+public class RedFun<T> implements Function<T, ObservableSource<RedBaseResponse>> {
 
     String taskName;
 
@@ -20,14 +20,14 @@ public class RedFun implements Function<RedBaseResponse, ObservableSource<RedBas
 
     }
 
-    protected void checkError(int code){
-        if(code != 1){
-            throw new ApiException(code, taskName + "error");
+    protected void checkError(RedBaseResponse code){
+        if(code .getStatus() != 1){
+            throw new ApiException(code.getStatus(), taskName + code.getMsg());
         }
     }
 
     @Override
-    public ObservableSource<RedBaseResponse> apply(RedBaseResponse redBaseResponse) throws Exception {
+    public ObservableSource<RedBaseResponse> apply(T redBaseResponse) throws Exception {
 
         return null;
     }

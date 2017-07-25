@@ -3,7 +3,7 @@ package com.jackzhous.decodeapp.encode;
 import android.util.Log;
 
 /**
- * Created by jackzhous on 2017/7/20.
+ * Created by jackzhous on 2017/7/25.
  */
 
 public class JLog {
@@ -14,5 +14,4 @@ public class JLog {
             Log.i(TAG, message);
         }
     }
-
 }
