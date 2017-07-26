@@ -7,6 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioGroup;
 
+import com.jackzhous.decodeapp.encode.JLog;
+
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  * Created by jackzhous on 2017/7/24.
  */
@@ -22,6 +27,9 @@ public class ChooseAppActivity extends AppCompatActivity implements RadioGroup.O
 
         RadioGroup rd = (RadioGroup)findViewById(R.id.radiogroup);
         rd.setOnCheckedChangeListener(this);
+
+
+
     }
 
 

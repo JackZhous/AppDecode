@@ -4,6 +4,7 @@ import com.jackzhous.decodeapp.request.RedListRequest;
 import com.jackzhous.decodeapp.response.RedAccepteResponse;
 import com.jackzhous.decodeapp.response.RedBaseResponse;
 import com.jackzhous.decodeapp.response.RedListResponse;
+import com.jackzhous.decodeapp.response.RedSignResponse;
 import com.jackzhous.netlibrary.NetClient;
 
 import io.reactivex.Observable;
@@ -19,10 +20,11 @@ import retrofit2.http.Url;
 
 public interface RedNetApis {
 
-    String RED_BASEURL = "http://api.lucktry.com/api/task/newbie/";
+    String RED_BASEURL = "http://api.lucktry.com/api/task/";
+
 
     @Headers("auth-md5:d345ab5ce03bea82f2854c2d09a1275d")
-    @POST("list")
+    @POST("newbie/list")
     Observable<RedListResponse> getShiWanTask(@Body RedListRequest redListRequest);
 
     @POST
@@ -30,6 +32,14 @@ public interface RedNetApis {
 
     @POST
     Observable<RedBaseResponse> finishShiWanTask(@Header("auth-md5") String header, @Body RedListRequest redListResponse, @Url String url);
+
+    @Headers("auth-md5:d345ab5ce03bea82f2854c2d09a1275d")
+    @POST("signin/list")
+    Observable<RedSignResponse> getSignedTask(@Body RedListRequest redListRequest);
+
+    @POST
+    Observable<RedBaseResponse> acceptSignedTask(@Header("auth-md5") String header, @Body RedListRequest redListResponse, @Url String url);
+
 
     final class Factory{
         public static NetClient client;

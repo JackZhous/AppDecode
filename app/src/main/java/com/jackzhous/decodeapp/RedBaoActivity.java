@@ -4,9 +4,14 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
+import com.jackzhous.decodeapp.adapter.BaseTaskadapter;
 import com.jackzhous.decodeapp.adapter.RedShiWanAdapter;
+import com.jackzhous.decodeapp.adapter.RedSignedAdapter;
+import com.jackzhous.decodeapp.adapter.ShenDuAdapter;
+import com.jackzhous.decodeapp.adapter.XianshiAdapter;
 import com.jackzhous.decodeapp.mvp.RedTaskPresenter;
 import com.jackzhous.decodeapp.response.RedListResponse;
+import com.jackzhous.decodeapp.response.RedSignResponse;
 
 /**
  * Created by jackzhous on 2017/7/24.
@@ -15,7 +20,7 @@ import com.jackzhous.decodeapp.response.RedListResponse;
 public class RedBaoActivity extends BaseActivity {
 
     RedTaskPresenter presenter;
-    RedShiWanAdapter adapter;
+    BaseTaskadapter adapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,7 +46,7 @@ public class RedBaoActivity extends BaseActivity {
         if("1".equals(taskType)){
             presenter.getTaskList();
         }else{
-            //presenter.doSearchShenDu();
+            presenter.getSignedTask();
         }
     }
 
@@ -63,7 +68,7 @@ public class RedBaoActivity extends BaseActivity {
             }
             presenter.doCompleteShiWanTask(bean);
         }else{
-            //presenter.doShenDuTask((ShenDuTaskBean.BodyBean.AppListBean.AppSubListBean)adapter.getItem(CurrentPos));
+            presenter.doSignTask((RedSignResponse.DataBean)adapter.getItem(CurrentPos));
         }
 
     }
@@ -82,6 +87,12 @@ public class RedBaoActivity extends BaseActivity {
 
     @Override
     public void endSearch(Object list) {
+        if("1".equals(taskType)){
+            adapter = new RedShiWanAdapter();
+        }else{
+            adapter = new RedSignedAdapter();
+        }
+        listView.setAdapter(adapter);
         adapter.setData(list);
     }
 

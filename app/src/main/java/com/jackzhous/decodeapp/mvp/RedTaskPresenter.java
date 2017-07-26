@@ -1,7 +1,5 @@
 package com.jackzhous.decodeapp.mvp;
 
-import android.icu.text.MessagePattern;
-
 import com.google.gson.Gson;
 import com.jackzhous.decodeapp.encode.Encode;
 import com.jackzhous.decodeapp.encode.JLog;
@@ -11,9 +9,13 @@ import com.jackzhous.decodeapp.request.RedListRequest;
 import com.jackzhous.decodeapp.response.RedAccepteResponse;
 import com.jackzhous.decodeapp.response.RedBaseResponse;
 import com.jackzhous.decodeapp.response.RedListResponse;
+import com.jackzhous.decodeapp.response.RedSignResponse;
 import com.jackzhous.decodeapp.rxjava.RedFun;
 import com.jackzhous.decodeapp.rxjava.RetryWithDelay;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
@@ -31,6 +33,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class RedTaskPresenter extends BasePresenter {
 
+    private static long cuurentMilles;
     private RedNetApis apis = RedNetApis.Factory.getHttpManager();
     private RedListRequest request = new RedListRequest();
 
@@ -38,6 +41,15 @@ public class RedTaskPresenter extends BasePresenter {
 
     public RedTaskPresenter(TaskView taskView) {
         this.taskView = taskView;
+        if(cuurentMilles == 0){
+            Calendar calendar = Calendar.getInstance();
+
+            calendar.set(Calendar.HOUR_OF_DAY, 23);
+            calendar.set(Calendar.MINUTE,59);
+            calendar.set(Calendar.SECOND, 59);
+            cuurentMilles = calendar.getTimeInMillis();
+            JLog.i(cuurentMilles+" ");
+        }
     }
 
     public void getTaskList(){
@@ -73,9 +85,66 @@ public class RedTaskPresenter extends BasePresenter {
                 });
         }
 
+
+    public void getSignedTask(){
+        apis.getSignedTask(request)
+                .subscribeOn(Schedulers.io())
+                .unsubscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<RedSignResponse>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        disposable = d;
+                    }
+
+                    @Override
+                    public void onNext(RedSignResponse value) {
+                        if(value.getStatus() == 1){
+                            List<RedSignResponse.DataBean> list = filterCurrentDayTask(value);
+                            if(list.size() <= 0){
+                                taskView.errorSeach("当天签到任务已经完成");
+                            }else{
+                                taskView.endSearch(list);
+                            }
+                        }
+                        else
+                            taskView.errorSeach(value.getMsg());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        e.printStackTrace();
+                        taskView.errorSeach("search error");
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+
+    /**
+     * 过滤当日的签到任务
+     * @param value
+     * @return
+     */
+    private List<RedSignResponse.DataBean> filterCurrentDayTask(RedSignResponse value){
+        List<RedSignResponse.DataBean> list = new ArrayList<>();
+        for(RedSignResponse.DataBean bean: value.getData()){
+            if(bean.getExpiredtime() < cuurentMilles){
+                JLog.i(bean.getExpiredtime()+"---");
+                list.add(bean);
+            }
+        }
+
+        return list;
+    }
+
     public void doCompleteShiWanTask(final RedListResponse.DataBean bean){
         String header = Encode.redAppEncode(bean.getAdid()+"", bean.getId()+"");
-        final String url = RedNetApis.RED_BASEURL + "accept" + "/" + bean.getAdid() + "/" + bean.getId();
+        final String url = RedNetApis.RED_BASEURL + "newbie/accept" + "/" + bean.getAdid() + "/" + bean.getId();
         apis.getJobId(header, request, url)
                 .subscribeOn(Schedulers.io())
                 .unsubscribeOn(Schedulers.io())
@@ -87,28 +156,122 @@ public class RedTaskPresenter extends BasePresenter {
                     }
                 })
                 .subscribeOn(AndroidSchedulers.mainThread())
-                .flatMap(new RedFun<RedAccepteResponse>("accept"){
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<RedAccepteResponse>() {
                     @Override
-                    public ObservableSource<RedBaseResponse> apply(RedAccepteResponse baseResponse) throws Exception {
-                        checkError(baseResponse);
-                        final RedAccepteResponse.DataBean bean1 = baseResponse.getData();
-                        String header = Encode.redAppEncode(bean1.getId()+"", bean1.getAdid()+"" , bean1.getJobid()+"");
-                        String url1 = RedNetApis.RED_BASEURL + "finish/" + bean.getAdid() + "/" + bean.getId() + "/" + bean1.getJobid();
-                        Observable source = apis.finishShiWanTask(header, request, url1);
-                        source.timer(1, TimeUnit.MINUTES);
-                        return source;
+                    public void onSubscribe(Disposable d) {
+                        disposable = d;
+                    }
+
+                    @Override
+                    public void onNext(RedAccepteResponse value) {
+                        JLog.i("finish" + new Gson().toJson(value));
+                        if(value.getStatus() == 1){
+                            ShiWanTasklastStep(value.getData());
+                        }else
+                            taskView.endTask(value.getStatus(), value.getMsg());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        e.printStackTrace();
+                        String message;
+                        if( e instanceof ApiException){
+                            ApiException apiException = (ApiException)e;
+                            message = apiException.getMessage();
+                        }else{
+                            message = e.getClass().getSimpleName();
+                        }
+                        taskView.endTask(-1, message);
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+
+
+
+
+    public void doSignTask(final RedSignResponse.DataBean bean){
+        String acceptUrl = RedNetApis.RED_BASEURL + "signin/accept/" + bean.getAdid()+"/"+bean.getTaskid()+"/"+bean.getJobid();
+
+        final String header = Encode.redAppEncode(bean.getAdid()+"", bean.getJobid()+"", bean.getTaskid()+"");
+
+        apis.acceptSignedTask(header, request, acceptUrl)
+                .subscribeOn(Schedulers.io())
+                .unsubscribeOn(Schedulers.io())
+                .doOnSubscribe(new Consumer<Disposable>() {
+                    @Override
+                    public void accept(Disposable disposable) throws Exception {
+                        taskView.startTask(bean.getAppname() + "开始");
+
                     }
                 })
-                .flatMap(new RedFun<RedBaseResponse>("finish"){
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .delay(10, TimeUnit.SECONDS)
+                .flatMap(new RedFun<RedBaseResponse>("accept"){
                     @Override
                     public ObservableSource<RedBaseResponse> apply(RedBaseResponse redBaseResponse) throws Exception {
-                        if(redBaseResponse.getStatus() != -1){
-                            throw new ApiException(redBaseResponse.getStatus(), redBaseResponse.getMsg());
-                        }
-                        return Observable.just(redBaseResponse);
+                        checkError(redBaseResponse);
+
+                        String finishUrl = RedNetApis.RED_BASEURL + "signin/finish/" + bean.getAdid()+"/"+bean.getTaskid()+"/"+bean.getJobid();
+                        return apis.acceptSignedTask(header, request, finishUrl);
                     }
                 })
-                .retryWhen(new RetryWithDelay(10))
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<RedBaseResponse>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(RedBaseResponse value) {
+                        JLog.i("finish" + new Gson().toJson(value));
+                        taskView.endTask(value.getStatus(), value.getMsg());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        e.printStackTrace();
+                        String message;
+                        if( e instanceof ApiException){
+                            ApiException apiException = (ApiException)e;
+                            message = apiException.getMessage();
+                        }else{
+                            message = e.getClass().getSimpleName();
+                        }
+                        taskView.endTask(-1, message);
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+    }
+
+
+    private void ShiWanTasklastStep(final RedAccepteResponse.DataBean bean1){
+        Observable.timer(1, TimeUnit.MINUTES).flatMap(new Function<Long, ObservableSource<RedBaseResponse>>() {
+            @Override
+            public ObservableSource<RedBaseResponse> apply(Long aLong) throws Exception {
+                String header = Encode.redAppEncode(bean1.getId()+"", bean1.getAdid()+"" , bean1.getJobid()+"");
+                String url1 = RedNetApis.RED_BASEURL + "newbie/finish/" + bean1.getAdid() + "/" + bean1.getId() + "/" + bean1.getJobid();
+                return apis.finishShiWanTask(header, request, url1);
+            }
+        }).flatMap(new RedFun<RedBaseResponse>("finish"){
+            @Override
+            public ObservableSource<RedBaseResponse> apply(RedBaseResponse redBaseResponse) throws Exception {
+                checkError(redBaseResponse);
+                return Observable.just(redBaseResponse);
+            }
+        }).retryWhen(new RetryWithDelay(10))
+                .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<RedBaseResponse>() {
                     @Override
@@ -118,7 +281,6 @@ public class RedTaskPresenter extends BasePresenter {
 
                     @Override
                     public void onNext(RedBaseResponse value) {
-                        JLog.i("finish" + new Gson().toJson(value));
                         taskView.endTask(value.getStatus(), value.getMsg());
                     }
 

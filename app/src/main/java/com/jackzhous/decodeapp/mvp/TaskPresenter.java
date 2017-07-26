@@ -5,14 +5,17 @@ import com.jackzhous.decodeapp.encode.Encode;
 import com.jackzhous.decodeapp.encode.JLog;
 import com.jackzhous.decodeapp.exception.ApiException;
 import com.jackzhous.decodeapp.net.NetApis;
+import com.jackzhous.decodeapp.net.RedNetApis;
 import com.jackzhous.decodeapp.request.DoneRequest;
 import com.jackzhous.decodeapp.request.IngRequest;
 import com.jackzhous.decodeapp.request.ListRequest;
 import com.jackzhous.decodeapp.request.RobRequest;
 import com.jackzhous.decodeapp.response.BaseResponse;
+import com.jackzhous.decodeapp.response.RedBaseResponse;
 import com.jackzhous.decodeapp.response.ShenDuTaskBean;
 import com.jackzhous.decodeapp.response.TaskListResponse;
 import com.jackzhous.decodeapp.rxjava.Fun;
+import com.jackzhous.decodeapp.rxjava.RedFun;
 import com.jackzhous.decodeapp.rxjava.RetryWithDelay;
 
 import java.util.Random;
@@ -24,6 +27,7 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -168,27 +172,6 @@ public class TaskPresenter extends BasePresenter {
                         return apis.ing(ing1);
                     }
                 })
-                .delay(2, TimeUnit.MINUTES)
-                .flatMap(new Fun("ing4"){
-                    @Override
-                    public ObservableSource<BaseResponse> apply(BaseResponse baseResponse) throws Exception {
-                        checkError(baseResponse.getFlag());
-                        int number = MIN_NUMBER + new Random().nextInt(MAX_NUMBER - MIN_NUMBER);
-                        long time = System.currentTimeMillis()/1000;
-                        long opentTime = time - number;
-                        String done = Encode.encode(new DoneRequest("1", taskBean.getIDTask(), opentTime+""));
-                        JLog.i("done " +done);
-                        return apis.done(done);
-                    }
-                }).flatMap(new Fun("done"){
-                    @Override
-                    public ObservableSource<BaseResponse> apply(BaseResponse baseResponse) throws Exception {
-                        if(baseResponse.getFlag() != 1){
-                            throw new ApiException(baseResponse.getFlag(), "错误");
-                        }
-                        return Observable.just(baseResponse);
-                    }
-                }).retryWhen(new RetryWithDelay(20))
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<BaseResponse>() {
                     @Override
@@ -198,14 +181,11 @@ public class TaskPresenter extends BasePresenter {
 
                     @Override
                     public void onNext(BaseResponse value) {
-                        String str;
-                        if(value.getFlag() == 1){
-                            str = taskBean.getAppName() + "任务完成";
-                        }else{
-                            str = taskBean.getAppName() + "任务失败";
-                            JLog.i(new Gson().toJson(value));
+                        if(value.getFlag() == 1)
+                            lastShiWanTask(taskBean);
+                        else{
+                            taskView.endTask(-1, "失败");
                         }
-                        taskView.endTask(value.getFlag(), str);
                     }
 
                     @Override
@@ -329,6 +309,65 @@ public class TaskPresenter extends BasePresenter {
 
                     @Override
                     public void onComplete() {
+                    }
+                });
+    }
+
+    private void lastShiWanTask(final TaskListResponse.BodyBean.AppListBean taskBean){
+        Observable.timer(2, TimeUnit.MINUTES).flatMap(new Function<Long, ObservableSource<BaseResponse>>() {
+            @Override
+            public ObservableSource<BaseResponse> apply(Long aLong) throws Exception {
+                int number = MIN_NUMBER + new Random().nextInt(MAX_NUMBER - MIN_NUMBER);
+                long time = System.currentTimeMillis()/1000;
+                long opentTime = time - number;
+                String done = Encode.encode(new DoneRequest("1", taskBean.getIDTask(), opentTime+""));
+                JLog.i("done " +done);
+
+                return apis.done(done);
+            }
+        }).flatMap(new Fun("done"){
+            @Override
+            public ObservableSource<BaseResponse> apply(BaseResponse redBaseResponse) throws Exception {
+                checkError(redBaseResponse.getFlag());
+                return Observable.just(redBaseResponse);
+            }
+        }).retryWhen(new RetryWithDelay(30))
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<BaseResponse>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        disposable = d;
+                    }
+
+                    @Override
+                    public void onNext(BaseResponse value) {
+                        String str;
+                        if(value.getFlag() == 1){
+                            str = taskBean.getAppName() + "任务完成";
+                        }else{
+                            str = taskBean.getAppName() + "任务失败";
+                            JLog.i(new Gson().toJson(value));
+                        }
+                        taskView.endTask(value.getFlag(), str);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        e.printStackTrace();
+                        String message;
+                        if( e instanceof ApiException){
+                            ApiException apiException = (ApiException)e;
+                            message = apiException.getMessage();
+                        }else{
+                            message = e.getClass().getSimpleName();
+                        }
+                        taskView.endTask(-1, message);
+                    }
+
+                    @Override
+                    public void onComplete() {
+
                     }
                 });
     }
